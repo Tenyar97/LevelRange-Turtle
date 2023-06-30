@@ -8,7 +8,7 @@ Details
 ----------------------
 Title: 	        LevelRange
 Interface:      11200
-Version:        1.2.0
+Version:        2.0.1
 
 Author:         Bull3t, Tenyar97
 Addon Website:  https://github.com/Tenyar97/LevelRange-Turtle
@@ -21,6 +21,13 @@ Current Features:
 ----------------------
 Change Log
 ----------------------
+2.0.1 - Update
+	[*] Updated outdated refrences.
+	[*] Improved localization.
+	[*] Removed "The Lower Karazhan Halls", as it is not added yet.
+	[*] Fixed bug where "Black Fathoms Deep" did not appear in Ashenvale's information box.
+
+
 2.0.0 - Release
 [*] Ported to Turtle-Wow
 	[*] Added Zone: Gillijim's Isle

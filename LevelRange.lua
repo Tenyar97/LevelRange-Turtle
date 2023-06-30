@@ -20,16 +20,16 @@
 LEVELRANGE_NAME			= "LevelRange"
 
 -- Version Number
-LEVELRANGE_VERSION   		= "1.2.0";
+LEVELRANGE_VERSION   		= "2.0.1";
 
 -- Details
 Details = {
     name 			= LEVELRANGE_NAME,
     version 			= LEVELRANGE_VERSION,
-    releaseDate 		= "September 05, 2006",
-    author 			= "Bull3t",
-    email 			= "bull3t@ntlworld.com",
-    website 			= "http://www.levelrange.co.nr",
+    releaseDate 		= "June 30, 2023",
+    author 			= "Bull3t, Tenyar97",
+    email 			= "",
+    website 			= "https://github.com/Tenyar97/LevelRange-Turtle",
     category 			= MYADDONS_CATEGORY_MAP,
     optionsframe 		= "LevelRangeOptionsFrame"
 };
@@ -111,12 +111,12 @@ LEVELRANGE_RANGES = {
 	
 		--Turtle WoW Zones
 	
-	
-	--["Gilneas"]  	= {43, 49, lTYPE_CONTESTED},
-	["Gillijim's Isle"]  	= {48, 53, lTYPE_CONTESTED},
-	["Lapidis Isle"]  	= {48, 53, lTYPE_CONTESTED},
-	["Tel'Abim"]  	= {54, 60, lTYPE_CONTESTED},
-	["Hyjal"]  	= {60, 60, lTYPE_CONTESTED},
+	["ASHENVALE"]	= {"BFD", " (24-32)"},
+	--[LEVELRANGE_GILNEAS]  	= {39, 45, lTYPE_CONTESTED},
+	[LEVELRANGE_GILLIJIM]  	= {48, 53, lTYPE_CONTESTED},
+	[LEVELRANGE_LAPIDIS]  	= {48, 53, lTYPE_CONTESTED},
+	[LEVELRANGE_TELABIM]  	= {54, 60, lTYPE_CONTESTED},
+	[LEVELRANGE_HYJAL]  	= {60, 60, lTYPE_CONTESTED},
 
 };
 
@@ -125,7 +125,7 @@ LEVELRANGE_INSTANCES = {
     [LEVELRANGE_WESTFALL]	= {LEVELRANGE_DEADMINES, " (17-26)"},	
     [LEVELRANGE_BARRENS]	= {LEVELRANGE_WAILINGCAVERNS, " (17-24)", LEVELRANGE_RAZORFENKRAUL, " (25-30)", LEVELRANGE_RAZORFENDOWNS, " (33-45)"},
     [LEVELRANGE_SILVERPINE]	= {LEVELRANGE_SHADOWFANGKEEP, " (22-30)"},
-    [LEVELRANGE_ASHENVALE]	= {LEVELRANGE_BLACKFATHOMDEEPS, " (24-32)"},
+    
     [LEVELRANGE_DUNMOROGH]	= {LEVELRANGE_GNOMEREGAN, " (29-38)"},
     [LEVELRANGE_TIRISFAL]	= {LEVELRANGE_SCARLETMONASTERY, " (34-45)"},
     [LEVELRANGE_BADLANDS]  	= {LEVELRANGE_ULDAMAN, " (35-47)"},
@@ -140,15 +140,17 @@ LEVELRANGE_INSTANCES = {
     [LEVELRANGE_ELWYNN]		= {LEVELRANGE_STOCKADES, " (24-32)"},
     [LEVELRANGE_TANARIS] 	= {LEVELRANGE_ZULFARRAK, " (44-54)"},
 	
-		--Turtle WoW Dungeons
 	
-		
-	[LEVELRANGE_ASHENVALE] 	= {"The Crescent Grove", " (32-38)"},
-	--["Gilneas"] 	= {"Gilneas City", " (39-45)"},
-	[LEVELRANGE_BURNINGSTEPPE] 	= {"Hateforge Quarry", " (52-60)"},
-	[LEVELRANGE_DEADWINDPASS] 	= {"The Karazhan Crypt", " (58 - 60)"},
-	[LEVELRANGE_ELWYNN] 	= {"The Stormwind Vaults", " (60+)"},
-	[LEVELRANGE_TANARIS] 	= {"Caverns of Time: The Black Morass", " (60+)"},
+		--Turtle WoW Dungeons
+	[LEVELRANGE_ASHENVALE]	= {LEVELRANGE_BLACKFATHOMDEEPS, " (24-32)", LEVELRANGE_CRESCENTGROVE, " (32-38)"},
+	--[LEVELRANGE_GILNEAS] 	= {LEVELRANGE_GILNEASCITY, " (43-49)"},
+	[LEVELRANGE_BURNINGSTEPPE] 	= {LEVELRANGE_HATEFORGE, " (52-60)"},
+	[LEVELRANGE_DEADWINDPASS] 	= {LEVELRANGE_KARACRYPT, " (58 - 60)"},
+	[LEVELRANGE_ELWYNN] 	= {LEVELRANGE_SWVAULTS, " (60+)"},
+	[LEVELRANGE_TANARIS] 	= {LEVELRANGE_CoTBLACKMORASS, " (60+)"},
+	
+	
+	
 };
 
 -- Raids
@@ -160,8 +162,9 @@ LEVELRANGE_RAIDS = {
 	
 		--Turtle WoW Raids
 	
-	["Hyjal"]	= {"The Emerald Sanctum", " (60+)"},
-	[LEVELRANGE_DEADWINDPASS] 	= {"Lower Karazhan Halls", " (60+)"},
+	[LEVELRANGE_HYJAL]	= {LEVELRANGE_EMERALDSANCTUM, " (60+)"},
+	--[LEVELRANGE_DEADWINDPASS] 	= {LEVELRANGE_KARAHALLS, " (60+)"},
+	
 };
 
 -- Sub-zones
