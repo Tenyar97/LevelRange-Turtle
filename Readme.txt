@@ -1,6 +1,7 @@
 --
 -- LevelRange :: Readme
--- Copyright (c) 2006 Philip Hughes (Bull3t)
+-- Copyright (c) 2006 Philip Hughes (Bull3t) 
+-- http://bull3t.blogspot.com
 -- 
 
 ----------------------
@@ -8,9 +9,9 @@ Details
 ----------------------
 Title: 	        LevelRange
 Interface:      11200
-Version:        2.0.1
+Version:        2.0.2
 
-Author:         Bull3t, Tenyar97
+Author:         Bull3t, Tenyar97, rado-boy
 Addon Website:  https://github.com/Tenyar97/LevelRange-Turtle
 
 Current Features:
@@ -21,6 +22,9 @@ Current Features:
 ----------------------
 Change Log
 ----------------------
+2.0.2 - Update (rado-boy)
+	[*] Added togglable option to show fishing level requirement on tooltip.  Not all zones are complete currently.
+
 2.0.1 - Update
 	[*] Updated outdated refrences.
 	[*] Improved localization.

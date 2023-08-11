@@ -1,10 +1,10 @@
 ## Interface: 11200
 ## Title: LevelRange [|cff3fcf26Turtle|r] 
-## Version: 1.0.0
-## Author: Bull3t
+## Version: 2.0.2
+## Author: Bull3t, Tenyar97, rado-boy
 ## Notes: Shows the zone level range on the World Map. Now with 100% more turtles!
-## eMail: bull3t@ntlworld.com
-## URL: http://bull3t.blogspot.com
+## eMail: bob@example.com
+## URL: https://github.com/Tenyar97/LevelRange-Turtle
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 ## OptionalDeps: myAddOns

@@ -66,7 +66,7 @@
          movable="true" enableMouse="true" hidden="true" parent="UIParent"
          enableKeyboard="true">
     <Size>
-      <AbsDimension x="350" y="195"/>
+      <AbsDimension x="350" y="250"/>
     </Size>
     <Anchors>
       <Anchor point="CENTER"/>
@@ -160,6 +160,18 @@
         </Anchors>
       </CheckButton>
 
+	  <!-- Option #5; row 5, column 1 -->
+      <CheckButton name="$parentOpt5"
+                   inherits="LevelRangeOptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="45" y="-145"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </CheckButton>
+      
       <Button name="LevelRangeOptionsFrameClose"
               inherits="OptionsButtonTemplate" text="Close">
         <Anchors>

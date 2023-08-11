@@ -127,6 +127,7 @@ LEVELRANGE_RAIDSTEXT		= "Raids:";
 
 -- General Strings
 LEVELRANGE_LEVELS        	= "Levels %d - %d";
+LEVELRANGE_FLEVEL			= "Fishing Level %d";
 
 -- Message Strings
 LEVELRANGE_LOADEDPREFIX		= "LevelRange version "
@@ -160,7 +161,8 @@ LEVELRANGE_HELP1		= "/lr >> Open LevelRange options frame."
 LEVELRANGE_HELP2 		= "/lr toggle >> Toggle showing of the LevelRange tooltip."
 LEVELRANGE_HELP3 		= "/lr instances >> Toggle showing of instances on the tooltip."
 LEVELRANGE_HELP4 		= "/lr pvp >> Toggle showing of PvP diplomacy on the tooltip."
-LEVELRANGE_HELP5		= "Long Command: /levelrange can also be used inplace of /lr."
+LEVELRANGE_HELP5 		= "/lr fishing >> Toggle display of minimum fishing level requirement on tooltip."
+LEVELRANGE_HELP6		= "Long Command: /levelrange can also be used inplace of /lr."
 
 -- Toggle Message Strings
 LEVELRANGE_ON			= "ON"
@@ -173,6 +175,7 @@ LEVELRANGE_TOGGLESHOW		= "LevelRange Tooltip"
 LEVELRANGE_TOGGLEINSTANCES	= "Display LevelRange Instances"
 LEVELRANGE_TOGGLERAIDS		= "Display LevelRange Raids"
 LEVELRANGE_TOGGLEPVP		= "Display LevelRange PvP Diplomacy"
+LEVELRANGE_TOGGLEFISHING	= "Display Minimum fishing level requirement"
 
 -- Options Frame Strings
 LEVELRANGE_OPTIONS_CLOSE	= "Close"
@@ -200,9 +203,15 @@ LEVELRANGE_OPTIONS[4] = {   -- Option 4
     option 			= "showPvP",
     tooltip 			= "Show/hide PvP Diplomacy on tooltip",
 };
+LEVELRANGE_OPTIONS[5] = {   -- Option 5 
+    label 			= "Show Fishing level requirement",
+    option 			= "showFishing",
+    tooltip 			= "Show/hide Fishing level requirement on tooltip",
+};
 
 LEVELRANGE_DEFAULT_OPTS = {
-     ["showLevelRange"]		= true,
-     ["showInstances"]		= true,
-     ["showPvP"]		= true,
+    ["showLevelRange"]	= true,
+    ["showInstances"]	= true,
+    ["showPvP"]		    = true,
+    ["showFishing"]		= true,
 };

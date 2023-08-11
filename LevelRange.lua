@@ -20,23 +20,23 @@
 LEVELRANGE_NAME			= "LevelRange"
 
 -- Version Number
-LEVELRANGE_VERSION   		= "2.0.1";
+LEVELRANGE_VERSION   	= "2.0.2";
 
 -- Details
 Details = {
     name 			= LEVELRANGE_NAME,
-    version 			= LEVELRANGE_VERSION,
-    releaseDate 		= "June 30, 2023",
-    author 			= "Bull3t, Tenyar97",
+    version 		= LEVELRANGE_VERSION,
+    releaseDate 	= "Aug 8, 2023",
+    author 			= "Bull3t, Tenyar97, rado-boy",
     email 			= "",
-    website 			= "https://github.com/Tenyar97/LevelRange-Turtle",
-    category 			= MYADDONS_CATEGORY_MAP,
-    optionsframe 		= "LevelRangeOptionsFrame"
+    website 		= "https://github.com/Tenyar97/LevelRange-Turtle",
+    category 		= MYADDONS_CATEGORY_MAP,
+    optionsframe 	= "LevelRangeOptionsFrame"
 };
 
 -- Help
 Help = {
-    [1] 			= LEVELRANGE_HELP0 .. "\n" .. LEVELRANGE_HELP1 .. "\n" .. LEVELRANGE_HELP2 .. "\n" .. LEVELRANGE_HELP3 .. "\n" .. LEVELRANGE_HELP4 .. "\n" .. LEVELRANGE_HELP5,
+    [1] 			= LEVELRANGE_HELP0 .. "\n" .. LEVELRANGE_HELP1 .. "\n" .. LEVELRANGE_HELP2 .. "\n" .. LEVELRANGE_HELP3 .. "\n" .. LEVELRANGE_HELP4 .. "\n" .. LEVELRANGE_HELP5 .. "\n" .. LEVELRANGE_HELP6,
 };
 
 -- Player Info
@@ -118,6 +118,61 @@ LEVELRANGE_RANGES = {
 	[LEVELRANGE_TELABIM]  	= {54, 60, lTYPE_CONTESTED},
 	[LEVELRANGE_HYJAL]  	= {60, 60, lTYPE_CONTESTED},
 
+};
+
+-- Fishing Level Requirements
+LEVELRANGE_FISHING = {
+    [LEVELRANGE_ELWYNN]        	= {25},
+    [LEVELRANGE_DUNMOROGH]     	= {25},
+    [LEVELRANGE_TIRISFAL]      	= {25},
+    [LEVELRANGE_LOCHMODAN]    	= {75},
+    [LEVELRANGE_SILVERPINE]    	= {75},
+    [LEVELRANGE_WESTFALL]      	= {75},
+    [LEVELRANGE_REDRIDGE]      	= {150},
+    [LEVELRANGE_DUSKWOOD]      	= {150},
+    [LEVELRANGE_HILLSBRAD]     	= {150},
+    [LEVELRANGE_WETLANDS]      	= {150},
+    [LEVELRANGE_ALTERAC]       	= {225},
+    [LEVELRANGE_ARATHI]        	= {225},
+    [LEVELRANGE_STRANGLETHORN] 	= {225},
+    [LEVELRANGE_BADLANDS]      	= {35},
+    [LEVELRANGE_SORROWS]       	= {225},
+    [LEVELRANGE_HINTERLANDS]   	= {300},
+    --[LEVELRANGE_SEARINGGORGE]  	= {0},
+    --[LEVELRANGE_BLASTEDLANDS]  	= {0},
+    --[LEVELRANGE_BURNINGSTEPPE] 	= {0},
+    [LEVELRANGE_WESTERNPLAGUE] 	= {300},
+    --[LEVELRANGE_EASTERNPLAGUE] 	= {0},
+    --[LEVELRANGE_DEADWINDPASS]  	= {0},
+    
+    [LEVELRANGE_DUROTAR]       	= {25},
+    [LEVELRANGE_MULGORE]       	= {25},
+    [LEVELRANGE_DARKSHORE]     	= {75},
+    [LEVELRANGE_BARRENS]       	= {75},
+    [LEVELRANGE_STONETALON]    	= {150},
+    [LEVELRANGE_ASHENVALE]     	= {150},
+    [LEVELRANGE_1KNEEDLES]     	= {225},
+    [LEVELRANGE_DESOLACE]      	= {225},
+    [LEVELRANGE_DUSTWALLOW]    	= {225},
+    [LEVELRANGE_FERALAS]       	= {300},
+    [LEVELRANGE_TANARIS]       	= {300},
+    [LEVELRANGE_AZSHARA]       	= {300},
+    [LEVELRANGE_FELWOOD]       	= {300},
+    [LEVELRANGE_UNGOROCRATER]  	= {300},
+    --[LEVELRANGE_SILITHUS]      	= {0},
+    --[LEVELRANGE_WINTERSPRING]  	= {0},
+
+    [LEVELRANGE_MOONGLADE]     	= {300},
+    
+    [LEVELRANGE_TELDRASSIL]    	= {25},
+
+	--Turtle WoW Zones
+	
+    --[LEVELRANGE_GILNEAS]  	= {0},
+    --[LEVELRANGE_GILLIJIM]  	= {0},
+    --[LEVELRANGE_LAPIDIS]  	= {0},
+    --[LEVELRANGE_TELABIM]  	= {0},
+    --[LEVELRANGE_HYJAL]  	= {0},
 };
 
 -- Instances
@@ -222,6 +277,7 @@ local function lUpdateTooltip(zoneName)
 
     local levels = nil;
     local actualside = nil;
+    local flevel = nil;
 
     if (LEVELRANGE_RANGES[zoneName]) then
         local _, faction = UnitFactionGroup("player");
@@ -244,12 +300,25 @@ local function lUpdateTooltip(zoneName)
         levels = string.format(LEVELRANGE_LEVELS, min, max);
     end
 
+	-- Determine fishing level Requirement
+    if (LEVELRANGE_FISHING[zoneName]) then
+		local fmin = LEVELRANGE_FISHING[zoneName][1];
+		flevel = string.format(LEVELRANGE_FLEVEL, fmin);
+	end
+
     -- Start making the Tooltip
 
     -- Show the zone title and add level range if known
     LevelRangeTooltip:SetText(zoneName, normalcol.r, normalcol.g, normalcol.b);
     if levels then
         LevelRangeTooltip:AddLine(levels, levelscol.r, levelscol.g, levelscol.b);
+    end
+
+    -- Show fishing level requirement if desired
+	if (LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showFishing == true) then
+		if flevel then
+			LevelRangeTooltip:AddLine(flevel, levelscol.r, levelscol.g, levelscol.b);
+		end
     end
     
     -- Show diplomacy if known and if wanted
@@ -380,6 +449,10 @@ function LevelRange_SlashHandler(msg)
     elseif (Cmd == "instances") then
         toggleInstances();
 
+    -- Toggle fishing level requirement on tooltip
+    elseif (Cmd == "fishing") then
+        toggleFishing();
+
     elseif (Cmd == "") then
         if (LevelRangeOptionsFrame:IsVisible()) then
             HideUIPanel(LevelRangeOptionsFrame);
@@ -451,7 +524,15 @@ function togglePvP()
     end
 end
 
-
+function toggleFishing()
+    if (LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showFishing == false) then
+       LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showFishing = true;
+       printOPTION(LEVELRANGE_TOGGLEFISHING, LEVELRANGE_ON);
+    else
+       LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showFishing = false;
+       printOPTION(LEVELRANGE_TOGGLEFISHING, LEVELRANGE_OFF);
+    end
+end
 --------------------------------------------------------------------------------------------------
 -- Instance and Raid Information
 --------------------------------------------------------------------------------------------------
@@ -540,6 +621,8 @@ function LevelRangeOptionsCheckButton_OnClick()
 	toggleRaids();
     elseif (this.option == "showPvP") then
 	togglePvP();
+    elseif (this.option == "showFishing") then
+	toggleFishing();
     end
     
     if (this:GetChecked()) then
@@ -615,6 +698,20 @@ function loadSettings()
         optionButton:SetChecked(false);
         LevelRange.Opts["showPvP"] = false;
     end
+
+    if (LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showFishing == true) then
+        local optionButton = getglobal("LevelRangeOptionsFrame" .. "Opt5");
+        
+        optionButton:SetChecked(true);
+        LevelRange.Opts["showFishing"] = true;
+
+    elseif (LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showFishing == false) then
+        local optionButton = getglobal("LevelRangeOptionsFrame" .. "Opt5");
+
+        optionButton:SetChecked(false);
+        LevelRange.Opts["showFishing"] = false;
+    end
+
 end
 
 
@@ -674,6 +771,12 @@ function LevelRange_Initialize()
     if (LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showPvP == nil) then
         LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showPvP = DEFAULT_LEVELRANGE_SHOWPVP;
     end
+
+	-- fishing Toggle
+    if (LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showFishing == nil) then
+        LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showFishing = DEFAULT_LEVELRANGE_SHOWFISHING;
+    end
+
 end
 
 function LevelRange_OnEvent(event)
