@@ -58,6 +58,18 @@ LEVELRANGE_SILITHUS         = "Silithus";
 LEVELRANGE_WINTERSPRING     = "Winterspring";
 LEVELRANGE_TELDRASSIL       = "Teldrassil";
 LEVELRANGE_DEADWINDPASS     = "Deadwind Pass";
+
+--Turtle WoW Zones
+LEVELRANGE_THALASSIANHIGHLANDS  = "Thalassian Highlands";
+LEVELRANGE_BLACKSTONEISLAND     = "Blackstone Island";
+LEVELRANGE_GILNEAS              = "Gilneas";
+LEVELRANGE_GILLIJIM             = "Gillijim's Isle";
+LEVELRANGE_LAPIDIS              = "Lapidis Isle";
+LEVELRANGE_TELABIM              = "Tel'Abim";
+LEVELRANGE_SCARLETENCLAVE       = "Scarlet Enclave";
+LEVELRANGE_HYJAL                = "Hyjal";
+
+-- Sub-zones
 LEVELRANGE_ORGRIMMAR        = "Orgrimmar";
 LEVELRANGE_THUNDERBLUFF     = "Thunder Bluff";
 LEVELRANGE_UNDERCITY        = "Undercity";
@@ -65,12 +77,10 @@ LEVELRANGE_IRONFORGE        = "Ironforge";
 LEVELRANGE_STORMWIND        = "Stormwind City";
 LEVELRANGE_DARNASSUS        = "Darnassus";
 
---Turtle WoW Zones
-LEVELRANGE_GILNEAS          = "Gilneas";
-LEVELRANGE_GILLIJIM         = "Gillijim's Isle";
-LEVELRANGE_LAPIDIS          = "Lapidis Isle";
-LEVELRANGE_TELABIM          = "Tel'Abim";
-LEVELRANGE_HYJAL            = "Hyjal";
+--Turtle WoW Sub-zones
+LEVELRANGE_ALAHTHALAS       = "Alah'Thalas";
+LEVELRANGE_TIRISFALUPLANDS  = "Tirisfal Uplands";
+LEVELRANGE_RUINSOFZULRASAZ  = "Ruins of Zul'rasaz";
 
 -- Instances
 LEVELRANGE_DEADMINES        = "Deadmines";
@@ -98,10 +108,10 @@ LEVELRANGE_INSTANCESTEXT    = "Instances:";
 --Turtle WoW Dungeons
 LEVELRANGE_CRESCENTGROVE    = "The Crescent Grove";
 LEVELRANGE_GILNEASCITY      = "Gilneas City";
-LEVELRANGE_HATEFORGE        = "Hateforge Quarry";
-LEVELRANGE_KARACRYPT        = "The Karazhan Crypt";
-LEVELRANGE_SWVAULTS         = "The Stormwind Vaults";
-LEVELRANGE_CoTBLACKMORASS   = "Caverns of Time: The Black Morass";    
+LEVELRANGE_HATEFORGEQUARRY  = "Hateforge Quarry";
+LEVELRANGE_KARAZHANCRYPT    = "Karazhan Crypt";
+LEVELRANGE_STORMWINDVAULT   = "Stormwind Vault";
+LEVELRANGE_COTBLACKMORASS   = "Caverns of Time: The Black Morass";    
 
 -- Raids
 LEVELRANGE_NAXXRAMAS        = "Naxxramas";
@@ -111,8 +121,8 @@ LEVELRANGE_TEMPLEAHNQIRAJ   = "Temple of Ahn'Qiraj";
 LEVELRANGE_ZULGURUB         = "Zul'Gurub";
 
 --Turtle WoW Raids
-LEVELRANGE_EMERALDSANCTUM   = "The Emerald Sanctum";
-LEVELRANGE_KARAHALLS        = "Lower Karazhan Halls";
+LEVELRANGE_EMERALDSANCTUM       = "Emerald Sanctum";
+LEVELRANGE_LOWERKARAZHANHALLS   = "Lower Karazhan Halls";
 
 
 LEVELRANGE_RAIDSTEXT        = "Raids:";
