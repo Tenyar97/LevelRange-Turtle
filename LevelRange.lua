@@ -17,234 +17,222 @@
 --------------------------------------------------------------------------------------------------
 
 -- Name
-LEVELRANGE_NAME			= "LevelRange"
+LEVELRANGE_NAME     = "LevelRange"
 
 -- Version Number
-LEVELRANGE_VERSION   	= "2.0.2";
+LEVELRANGE_VERSION  = "2.0.2";
 
 -- Details
 Details = {
-    name 			= LEVELRANGE_NAME,
-    version 		= LEVELRANGE_VERSION,
-    releaseDate 	= "Aug 8, 2023",
-    author 			= "Bull3t, Tenyar97, rado-boy",
-    email 			= "",
-    website 		= "https://github.com/Tenyar97/LevelRange-Turtle",
-    category 		= MYADDONS_CATEGORY_MAP,
-    optionsframe 	= "LevelRangeOptionsFrame"
+    name            = LEVELRANGE_NAME,
+    version         = LEVELRANGE_VERSION,
+    releaseDate     = "Aug 8, 2023",
+    author          = "Bull3t, Tenyar97, rado-boy",
+    email           = "",
+    website         = "https://github.com/Tenyar97/LevelRange-Turtle",
+    category        = MYADDONS_CATEGORY_MAP,
+    optionsframe    = "LevelRangeOptionsFrame"
 };
 
 -- Help
 Help = {
-    [1] 			= LEVELRANGE_HELP0 .. "\n" .. LEVELRANGE_HELP1 .. "\n" .. LEVELRANGE_HELP2 .. "\n" .. LEVELRANGE_HELP3 .. "\n" .. LEVELRANGE_HELP4 .. "\n" .. LEVELRANGE_HELP5 .. "\n" .. LEVELRANGE_HELP6,
+    [1] = LEVELRANGE_HELP0 .. "\n" .. LEVELRANGE_HELP1 .. "\n" .. LEVELRANGE_HELP2 .. "\n" .. LEVELRANGE_HELP3 .. "\n" .. LEVELRANGE_HELP4 .. "\n" .. LEVELRANGE_HELP5 .. "\n" .. LEVELRANGE_HELP6,
 };
 
 -- Player Info
-playerName                      = UnitName("player");
-realmName                       = GetRealmName();
+playerName = UnitName("player");
+realmName  = GetRealmName();
 
 -- Default Variables
-LevelRangeSettings		= {};
-DEFAULT_LEVELRANGE_SHOW		= true;
+LevelRangeSettings              = {};
+DEFAULT_LEVELRANGE_SHOW         = true;
 DEFAULT_LEVELRANGE_SHOWINSTANCE = true;
-DEFAULT_LEVELRANGE_SHOWRAIDS	= true;
-DEFAULT_LEVELRANGE_SHOWPVP	= true;
+DEFAULT_LEVELRANGE_SHOWRAIDS    = true;
+DEFAULT_LEVELRANGE_SHOWPVP      = true;
 
 -- Realm|PlayerName
-LEVELRANGE_REALMPLAYERNAME 	= realmName .. "|" .. playerName
+LEVELRANGE_REALMPLAYERNAME = realmName .. "|" .. playerName
 
 -- Slash Commands
-LEVELRANGE_SLASH1     		= "lr"
-LEVELRANGE_SLASH2     		= "levelrange"
+LEVELRANGE_SLASH1 = "lr"
+LEVELRANGE_SLASH2 = "levelrange"
 
 -- Faction Types
-local lTYPE_HORDE     		= LEVELRANGE_HORDE;
-local lTYPE_ALLIANCE  		= LEVELRANGE_ALLIANCE;
-local lTYPE_CONTESTED 		= LEVELRANGE_CONTESTED;
+local lTYPE_HORDE       = LEVELRANGE_HORDE;
+local lTYPE_ALLIANCE    = LEVELRANGE_ALLIANCE;
+local lTYPE_CONTESTED   = LEVELRANGE_CONTESTED;
 
 -- Level Ranges
 LEVELRANGE_RANGES = {
-    [LEVELRANGE_ELWYNN]        	= { 1, 10, lTYPE_ALLIANCE},
-    [LEVELRANGE_DUNMOROGH]     	= { 1, 10, lTYPE_ALLIANCE},
-    [LEVELRANGE_TIRISFAL]      	= { 1, 10, lTYPE_HORDE},
-    [LEVELRANGE_LOCHMODAN]    	= {10, 20, lTYPE_ALLIANCE},
-    [LEVELRANGE_SILVERPINE]    	= {10, 20, lTYPE_HORDE},
-    [LEVELRANGE_WESTFALL]      	= {10, 20, lTYPE_ALLIANCE},
-    [LEVELRANGE_REDRIDGE]      	= {15, 25, lTYPE_CONTESTED},
-    [LEVELRANGE_DUSKWOOD]      	= {18, 30, lTYPE_CONTESTED},
-    [LEVELRANGE_HILLSBRAD]     	= {20, 30, lTYPE_CONTESTED},
-    [LEVELRANGE_WETLANDS]      	= {20, 30, lTYPE_CONTESTED},
-    [LEVELRANGE_ALTERAC]       	= {30, 40, lTYPE_CONTESTED},
-    [LEVELRANGE_ARATHI]        	= {30, 40, lTYPE_CONTESTED},
-    [LEVELRANGE_STRANGLETHORN] 	= {30, 45, lTYPE_CONTESTED},
-    [LEVELRANGE_BADLANDS]      	= {35, 45, lTYPE_CONTESTED},
-    [LEVELRANGE_SORROWS]       	= {35, 45, lTYPE_CONTESTED},
-    [LEVELRANGE_HINTERLANDS]   	= {40, 50, lTYPE_CONTESTED},
-    [LEVELRANGE_SEARINGGORGE]  	= {43, 50, lTYPE_CONTESTED},
-    [LEVELRANGE_BLASTEDLANDS]  	= {45, 55, lTYPE_CONTESTED},
-    [LEVELRANGE_BURNINGSTEPPE] 	= {50, 58, lTYPE_CONTESTED},
-    [LEVELRANGE_WESTERNPLAGUE] 	= {51, 58, lTYPE_CONTESTED},
-    [LEVELRANGE_EASTERNPLAGUE] 	= {53, 60, lTYPE_CONTESTED},
-    [LEVELRANGE_DEADWINDPASS]  	= {55, 60, lTYPE_CONTESTED},
-    
-    [LEVELRANGE_DUROTAR]       	= { 1, 10, lTYPE_HORDE},
-    [LEVELRANGE_MULGORE]       	= { 1, 10, lTYPE_HORDE},
-    [LEVELRANGE_DARKSHORE]     	= {10, 20, lTYPE_ALLIANCE},
-    [LEVELRANGE_BARRENS]       	= {10, 25, lTYPE_HORDE},
-    [LEVELRANGE_STONETALON]    	= {15, 27, lTYPE_CONTESTED},
-    [LEVELRANGE_ASHENVALE]     	= {18, 30, lTYPE_CONTESTED},
-    [LEVELRANGE_1KNEEDLES]     	= {25, 35, lTYPE_CONTESTED},
-    [LEVELRANGE_DESOLACE]      	= {30, 40, lTYPE_CONTESTED},
-    [LEVELRANGE_DUSTWALLOW]    	= {35, 45, lTYPE_CONTESTED},
-    [LEVELRANGE_FERALAS]       	= {40, 50, lTYPE_CONTESTED},
-    [LEVELRANGE_TANARIS]       	= {40, 50, lTYPE_CONTESTED},
-    [LEVELRANGE_AZSHARA]       	= {45, 55, lTYPE_CONTESTED},
-    [LEVELRANGE_FELWOOD]       	= {48, 55, lTYPE_CONTESTED},
-    [LEVELRANGE_UNGOROCRATER]  	= {48, 55, lTYPE_CONTESTED},
-    [LEVELRANGE_SILITHUS]      	= {55, 60, lTYPE_CONTESTED},
-    [LEVELRANGE_WINTERSPRING]  	= {55, 60, lTYPE_CONTESTED},
+    [LEVELRANGE_ELWYNN]                 = { 1, 10, lTYPE_ALLIANCE},
+    [LEVELRANGE_DUNMOROGH]              = { 1, 10, lTYPE_ALLIANCE},
+    [LEVELRANGE_TIRISFAL]               = { 1, 10, lTYPE_HORDE},
+    [LEVELRANGE_LOCHMODAN]              = {10, 20, lTYPE_ALLIANCE},
+    [LEVELRANGE_SILVERPINE]             = {10, 20, lTYPE_HORDE},
+    [LEVELRANGE_WESTFALL]               = {10, 20, lTYPE_ALLIANCE},
+    [LEVELRANGE_REDRIDGE]               = {15, 25, lTYPE_CONTESTED},
+    [LEVELRANGE_DUSKWOOD]               = {18, 30, lTYPE_CONTESTED},
+    [LEVELRANGE_HILLSBRAD]              = {20, 30, lTYPE_CONTESTED},
+    [LEVELRANGE_WETLANDS]               = {20, 30, lTYPE_CONTESTED},
+    [LEVELRANGE_ALTERAC]                = {30, 40, lTYPE_CONTESTED},
+    [LEVELRANGE_ARATHI]                 = {30, 40, lTYPE_CONTESTED},
+    [LEVELRANGE_STRANGLETHORN]          = {30, 45, lTYPE_CONTESTED},
+    [LEVELRANGE_BADLANDS]               = {35, 45, lTYPE_CONTESTED},
+    [LEVELRANGE_SORROWS]                = {35, 45, lTYPE_CONTESTED},
+    [LEVELRANGE_HINTERLANDS]            = {40, 50, lTYPE_CONTESTED},
+    [LEVELRANGE_SEARINGGORGE]           = {43, 50, lTYPE_CONTESTED},
+    [LEVELRANGE_BLASTEDLANDS]           = {45, 55, lTYPE_CONTESTED},
+    [LEVELRANGE_BURNINGSTEPPE]          = {50, 58, lTYPE_CONTESTED},
+    [LEVELRANGE_WESTERNPLAGUE]          = {51, 58, lTYPE_CONTESTED},
+    [LEVELRANGE_EASTERNPLAGUE]          = {53, 60, lTYPE_CONTESTED},
+    [LEVELRANGE_DEADWINDPASS]           = {55, 60, lTYPE_CONTESTED},
 
-    [LEVELRANGE_MOONGLADE]     	= { 1, 60, lTYPE_CONTESTED},
+    [LEVELRANGE_DUROTAR]                = { 1, 10, lTYPE_HORDE},
+    [LEVELRANGE_MULGORE]                = { 1, 10, lTYPE_HORDE},
+    [LEVELRANGE_DARKSHORE]              = {10, 20, lTYPE_ALLIANCE},
+    [LEVELRANGE_BARRENS]                = {10, 25, lTYPE_HORDE},
+    [LEVELRANGE_STONETALON]             = {15, 27, lTYPE_CONTESTED},
+    [LEVELRANGE_ASHENVALE]              = {18, 30, lTYPE_CONTESTED},
+    [LEVELRANGE_1KNEEDLES]              = {25, 35, lTYPE_CONTESTED},
+    [LEVELRANGE_DESOLACE]               = {30, 40, lTYPE_CONTESTED},
+    [LEVELRANGE_DUSTWALLOW]             = {35, 45, lTYPE_CONTESTED},
+    [LEVELRANGE_FERALAS]                = {40, 50, lTYPE_CONTESTED},
+    [LEVELRANGE_TANARIS]                = {40, 50, lTYPE_CONTESTED},
+    [LEVELRANGE_AZSHARA]                = {45, 55, lTYPE_CONTESTED},
+    [LEVELRANGE_FELWOOD]                = {48, 55, lTYPE_CONTESTED},
+    [LEVELRANGE_UNGOROCRATER]           = {48, 55, lTYPE_CONTESTED},
+    [LEVELRANGE_SILITHUS]               = {55, 60, lTYPE_CONTESTED},
+    [LEVELRANGE_WINTERSPRING]           = {55, 60, lTYPE_CONTESTED},
+
+    [LEVELRANGE_MOONGLADE]              = { 1, 60, lTYPE_CONTESTED},
+    [LEVELRANGE_TELDRASSIL]             = { 1, 10, lTYPE_ALLIANCE},
     
-    [LEVELRANGE_TELDRASSIL]    	= { 1, 10, lTYPE_ALLIANCE},
-	
-	
-		--Turtle WoW Zones
-	
-	["ASHENVALE"]	= {"BFD", " (24-32)"},
-	--[LEVELRANGE_GILNEAS]  	= {39, 45, lTYPE_CONTESTED},
-	[LEVELRANGE_GILLIJIM]  	= {48, 53, lTYPE_CONTESTED},
-	[LEVELRANGE_LAPIDIS]  	= {48, 53, lTYPE_CONTESTED},
-	[LEVELRANGE_TELABIM]  	= {54, 60, lTYPE_CONTESTED},
-	[LEVELRANGE_HYJAL]  	= {60, 60, lTYPE_CONTESTED},
+    --Turtle WoW Zones
+    --[LEVELRANGE_GILNEAS]                = {39, 45, lTYPE_CONTESTED},
+    [LEVELRANGE_GILLIJIM]               = {48, 53, lTYPE_CONTESTED},
+    [LEVELRANGE_LAPIDIS]                = {48, 53, lTYPE_CONTESTED},
+    [LEVELRANGE_TELABIM]                = {54, 60, lTYPE_CONTESTED},
+    [LEVELRANGE_HYJAL]                  = {60, 60, lTYPE_CONTESTED},
 
 };
 
 -- Fishing Level Requirements
 LEVELRANGE_FISHING = {
-    [LEVELRANGE_ELWYNN]        	= {25},
-    [LEVELRANGE_DUNMOROGH]     	= {25},
-    [LEVELRANGE_TIRISFAL]      	= {25},
-    [LEVELRANGE_LOCHMODAN]    	= {75},
-    [LEVELRANGE_SILVERPINE]    	= {75},
-    [LEVELRANGE_WESTFALL]      	= {75},
-    [LEVELRANGE_REDRIDGE]      	= {150},
-    [LEVELRANGE_DUSKWOOD]      	= {150},
-    [LEVELRANGE_HILLSBRAD]     	= {150},
-    [LEVELRANGE_WETLANDS]      	= {150},
-    [LEVELRANGE_ALTERAC]       	= {225},
-    [LEVELRANGE_ARATHI]        	= {225},
-    [LEVELRANGE_STRANGLETHORN] 	= {225},
-    [LEVELRANGE_BADLANDS]      	= {35},
-    [LEVELRANGE_SORROWS]       	= {225},
-    [LEVELRANGE_HINTERLANDS]   	= {300},
-    --[LEVELRANGE_SEARINGGORGE]  	= {0},
-    --[LEVELRANGE_BLASTEDLANDS]  	= {0},
-    --[LEVELRANGE_BURNINGSTEPPE] 	= {0},
-    [LEVELRANGE_WESTERNPLAGUE] 	= {300},
-    --[LEVELRANGE_EASTERNPLAGUE] 	= {0},
-    --[LEVELRANGE_DEADWINDPASS]  	= {0},
+    [LEVELRANGE_ELWYNN]             = {25},
+    [LEVELRANGE_DUNMOROGH]          = {25},
+    [LEVELRANGE_TIRISFAL]           = {25},
+    [LEVELRANGE_LOCHMODAN]          = {75},
+    [LEVELRANGE_SILVERPINE]         = {75},
+    [LEVELRANGE_WESTFALL]           = {75},
+    [LEVELRANGE_REDRIDGE]           = {150},
+    [LEVELRANGE_DUSKWOOD]           = {150},
+    [LEVELRANGE_HILLSBRAD]          = {150},
+    [LEVELRANGE_WETLANDS]           = {150},
+    [LEVELRANGE_ALTERAC]            = {225},
+    [LEVELRANGE_ARATHI]             = {225},
+    [LEVELRANGE_STRANGLETHORN]      = {225},
+    [LEVELRANGE_BADLANDS]           = {35},
+    [LEVELRANGE_SORROWS]            = {225},
+    [LEVELRANGE_HINTERLANDS]        = {300},
+    --[LEVELRANGE_SEARINGGORGE]       = {0},
+    --[LEVELRANGE_BLASTEDLANDS]       = {0},
+    --[LEVELRANGE_BURNINGSTEPPE]      = {0},
+    [LEVELRANGE_WESTERNPLAGUE]      = {300},
+    --[LEVELRANGE_EASTERNPLAGUE]      = {0},
+    --[LEVELRANGE_DEADWINDPASS]       = {0},
     
-    [LEVELRANGE_DUROTAR]       	= {25},
-    [LEVELRANGE_MULGORE]       	= {25},
-    [LEVELRANGE_DARKSHORE]     	= {75},
-    [LEVELRANGE_BARRENS]       	= {75},
-    [LEVELRANGE_STONETALON]    	= {150},
-    [LEVELRANGE_ASHENVALE]     	= {150},
-    [LEVELRANGE_1KNEEDLES]     	= {225},
-    [LEVELRANGE_DESOLACE]      	= {225},
-    [LEVELRANGE_DUSTWALLOW]    	= {225},
-    [LEVELRANGE_FERALAS]       	= {300},
-    [LEVELRANGE_TANARIS]       	= {300},
-    [LEVELRANGE_AZSHARA]       	= {300},
-    [LEVELRANGE_FELWOOD]       	= {300},
-    [LEVELRANGE_UNGOROCRATER]  	= {300},
-    --[LEVELRANGE_SILITHUS]      	= {0},
-    --[LEVELRANGE_WINTERSPRING]  	= {0},
+    [LEVELRANGE_DUROTAR]            = {25},
+    [LEVELRANGE_MULGORE]            = {25},
+    [LEVELRANGE_DARKSHORE]          = {75},
+    [LEVELRANGE_BARRENS]            = {75},
+    [LEVELRANGE_STONETALON]         = {150},
+    [LEVELRANGE_ASHENVALE]          = {150},
+    [LEVELRANGE_1KNEEDLES]          = {225},
+    [LEVELRANGE_DESOLACE]           = {225},
+    [LEVELRANGE_DUSTWALLOW]         = {225},
+    [LEVELRANGE_FERALAS]            = {300},
+    [LEVELRANGE_TANARIS]            = {300},
+    [LEVELRANGE_AZSHARA]            = {300},
+    [LEVELRANGE_FELWOOD]            = {300},
+    [LEVELRANGE_UNGOROCRATER]       = {300},
+    --[LEVELRANGE_SILITHUS]           = {0},
+    --[LEVELRANGE_WINTERSPRING]       = {0},
 
-    [LEVELRANGE_MOONGLADE]     	= {300},
-    
-    [LEVELRANGE_TELDRASSIL]    	= {25},
+    [LEVELRANGE_MOONGLADE]          = {300},
+    [LEVELRANGE_TELDRASSIL]         = {25},
 
-	--Turtle WoW Zones
-	
-    --[LEVELRANGE_GILNEAS]  	= {0},
-    --[LEVELRANGE_GILLIJIM]  	= {0},
-    --[LEVELRANGE_LAPIDIS]  	= {0},
-    --[LEVELRANGE_TELABIM]  	= {0},
-    --[LEVELRANGE_HYJAL]  	= {0},
+    --Turtle WoW Zones
+    --[LEVELRANGE_GILNEAS]            = {0},
+    --[LEVELRANGE_GILLIJIM]           = {0},
+    --[LEVELRANGE_LAPIDIS]            = {0},
+    --[LEVELRANGE_TELABIM]            = {0},
+    --[LEVELRANGE_HYJAL]              = {0},
 };
 
 -- Instances
 LEVELRANGE_INSTANCES = {
-    [LEVELRANGE_WESTFALL]	= {LEVELRANGE_DEADMINES, " (17-26)"},	
-    [LEVELRANGE_BARRENS]	= {LEVELRANGE_WAILINGCAVERNS, " (17-24)", LEVELRANGE_RAZORFENKRAUL, " (25-30)", LEVELRANGE_RAZORFENDOWNS, " (33-45)"},
-    [LEVELRANGE_SILVERPINE]	= {LEVELRANGE_SHADOWFANGKEEP, " (22-30)"},
+    [LEVELRANGE_WESTFALL]           = {LEVELRANGE_DEADMINES, " (17-26)"},    
+    [LEVELRANGE_BARRENS]            = {LEVELRANGE_WAILINGCAVERNS, " (17-24)", LEVELRANGE_RAZORFENKRAUL, " (25-30)", LEVELRANGE_RAZORFENDOWNS, " (33-45)"},
+    [LEVELRANGE_SILVERPINE]         = {LEVELRANGE_SHADOWFANGKEEP, " (22-30)"},
     
-    [LEVELRANGE_DUNMOROGH]	= {LEVELRANGE_GNOMEREGAN, " (29-38)"},
-    [LEVELRANGE_TIRISFAL]	= {LEVELRANGE_SCARLETMONASTERY, " (34-45)"},
-    [LEVELRANGE_BADLANDS]  	= {LEVELRANGE_ULDAMAN, " (35-47)"},
-    [LEVELRANGE_DESOLACE]	= {LEVELRANGE_MARAUDON, " (46-55)"},
-    [LEVELRANGE_SORROWS]    	= {LEVELRANGE_SUNKENTEMPLE, " (45-55)"},
-    [LEVELRANGE_SEARINGGORGE]   = {LEVELRANGE_BLACKROCKDEPTH, " (52-60)", LEVELRANGE_BLACKROCKSPIRE, " (58-60)"},
-    [LEVELRANGE_BURNINGSTEPPE]  = {LEVELRANGE_BLACKROCKDEPTH, " (52-60)", LEVELRANGE_BLACKROCKSPIRE, " (58-60)"},
-    [LEVELRANGE_EASTERNPLAGUE]  = {LEVELRANGE_STRATHOLME, " (58-60)"},
-    [LEVELRANGE_FERALAS]    	= {LEVELRANGE_DIREMAUL, " (55-60)"},
-    [LEVELRANGE_WESTERNPLAGUE]  = {LEVELRANGE_SCHOLOMANCE, " (57-60)"},
-    [LEVELRANGE_DUROTAR]     	= {LEVELRANGE_RAGEFIRECHASM, " (13-18)"},
-    [LEVELRANGE_ELWYNN]		= {LEVELRANGE_STOCKADES, " (24-32)"},
-    [LEVELRANGE_TANARIS] 	= {LEVELRANGE_ZULFARRAK, " (44-54)"},
-	
-	
-		--Turtle WoW Dungeons
-	[LEVELRANGE_ASHENVALE]	= {LEVELRANGE_BLACKFATHOMDEEPS, " (24-32)", LEVELRANGE_CRESCENTGROVE, " (32-38)"},
-	--[LEVELRANGE_GILNEAS] 	= {LEVELRANGE_GILNEASCITY, " (43-49)"},
-	[LEVELRANGE_BURNINGSTEPPE] 	= {LEVELRANGE_HATEFORGE, " (52-60)"},
-	[LEVELRANGE_DEADWINDPASS] 	= {LEVELRANGE_KARACRYPT, " (58 - 60)"},
-	[LEVELRANGE_ELWYNN] 	= {LEVELRANGE_SWVAULTS, " (60+)"},
-	[LEVELRANGE_TANARIS] 	= {LEVELRANGE_CoTBLACKMORASS, " (60+)"},
-	
-	
-	
+    [LEVELRANGE_DUNMOROGH]          = {LEVELRANGE_GNOMEREGAN, " (29-38)"},
+    [LEVELRANGE_TIRISFAL]           = {LEVELRANGE_SCARLETMONASTERY, " (34-45)"},
+    [LEVELRANGE_BADLANDS]           = {LEVELRANGE_ULDAMAN, " (35-47)"},
+    [LEVELRANGE_DESOLACE]           = {LEVELRANGE_MARAUDON, " (46-55)"},
+    [LEVELRANGE_SORROWS]            = {LEVELRANGE_SUNKENTEMPLE, " (45-55)"},
+    [LEVELRANGE_SEARINGGORGE]       = {LEVELRANGE_BLACKROCKDEPTH, " (52-60)", LEVELRANGE_BLACKROCKSPIRE, " (58-60)"},
+    [LEVELRANGE_BURNINGSTEPPE]      = {LEVELRANGE_BLACKROCKDEPTH, " (52-60)", LEVELRANGE_BLACKROCKSPIRE, " (58-60)"},
+    [LEVELRANGE_EASTERNPLAGUE]      = {LEVELRANGE_STRATHOLME, " (58-60)"},
+    [LEVELRANGE_FERALAS]            = {LEVELRANGE_DIREMAUL, " (55-60)"},
+    [LEVELRANGE_WESTERNPLAGUE]      = {LEVELRANGE_SCHOLOMANCE, " (57-60)"},
+    [LEVELRANGE_DUROTAR]            = {LEVELRANGE_RAGEFIRECHASM, " (13-18)"},
+    [LEVELRANGE_ELWYNN]             = {LEVELRANGE_STOCKADES, " (24-32)"},
+    [LEVELRANGE_TANARIS]            = {LEVELRANGE_ZULFARRAK, " (44-54)"},
+    
+    --Turtle WoW Dungeons
+    [LEVELRANGE_ASHENVALE]          = {LEVELRANGE_BLACKFATHOMDEEPS, " (24-32)", LEVELRANGE_CRESCENTGROVE, " (32-38)"},
+    --[LEVELRANGE_GILNEAS]            = {LEVELRANGE_GILNEASCITY, " (43-49)"},
+    [LEVELRANGE_BURNINGSTEPPE]      = {LEVELRANGE_HATEFORGE, " (52-60)"},
+    [LEVELRANGE_DEADWINDPASS]       = {LEVELRANGE_KARACRYPT, " (58 - 60)"},
+    [LEVELRANGE_ELWYNN]             = {LEVELRANGE_SWVAULTS, " (60+)"},
+    [LEVELRANGE_TANARIS]            = {LEVELRANGE_CoTBLACKMORASS, " (60+)"},
 };
 
 -- Raids
 LEVELRANGE_RAIDS = {
-    [LEVELRANGE_EASTERNPLAGUE]	= {LEVELRANGE_NAXXRAMAS, " (60+)"},
-    [LEVELRANGE_DUSTWALLOW]	= {LEVELRANGE_ONYXIASLAIR, " (60+)"},
-    [LEVELRANGE_SILITHUS]	= {LEVELRANGE_RUINSAHNQIRAJ, " (60+)", LEVELRANGE_TEMPLEAHNQIRAJ, " (60+)"},
-    [LEVELRANGE_STRANGLETHORN]	= {LEVELRANGE_ZULGURUB, " (60+)"},
-	
-		--Turtle WoW Raids
-	
-	[LEVELRANGE_HYJAL]	= {LEVELRANGE_EMERALDSANCTUM, " (60+)"},
-	--[LEVELRANGE_DEADWINDPASS] 	= {LEVELRANGE_KARAHALLS, " (60+)"},
-	
+    [LEVELRANGE_EASTERNPLAGUE]      = {LEVELRANGE_NAXXRAMAS, " (60+)"},
+    [LEVELRANGE_DUSTWALLOW]         = {LEVELRANGE_ONYXIASLAIR, " (60+)"},
+    [LEVELRANGE_SILITHUS]           = {LEVELRANGE_RUINSAHNQIRAJ, " (60+)", LEVELRANGE_TEMPLEAHNQIRAJ, " (60+)"},
+    [LEVELRANGE_STRANGLETHORN]      = {LEVELRANGE_ZULGURUB, " (60+)"},
+    
+    --Turtle WoW Raids
+    [LEVELRANGE_HYJAL]              = {LEVELRANGE_EMERALDSANCTUM, " (60+)"},
+    --[LEVELRANGE_DEADWINDPASS]       = {LEVELRANGE_KARAHALLS, " (60+)"},    
 };
 
 -- Sub-zones
 LEVELRANGE_SUBZONES = {
-    [LEVELRANGE_ORGRIMMAR]    	= LEVELRANGE_DUROTAR,
-    [LEVELRANGE_THUNDERBLUFF] 	= LEVELRANGE_MULGORE,
-    [LEVELRANGE_UNDERCITY]    	= LEVELRANGE_TIRISFAL,
-    [LEVELRANGE_IRONFORGE]    	= LEVELRANGE_DUNMOROGH,
-    [LEVELRANGE_STORMWIND]    	= LEVELRANGE_ELWYNN,
+    [LEVELRANGE_ORGRIMMAR]          = LEVELRANGE_DUROTAR,
+    [LEVELRANGE_THUNDERBLUFF]       = LEVELRANGE_MULGORE,
+    [LEVELRANGE_UNDERCITY]          = LEVELRANGE_TIRISFAL,
+    [LEVELRANGE_IRONFORGE]          = LEVELRANGE_DUNMOROGH,
+    [LEVELRANGE_STORMWIND]          = LEVELRANGE_ELWYNN,
 };
 
 -- Colours
 LEVELRANGE_COLORS = {
-    Unknown   			= { r = 0.8, g = 0.8, b = 0.8 },
-    Hostile   			= { r = 0.9, g = 0.2, b = 0.2 },
-    Friendly  			= { r = 0.2, g = 0.9, b = 0.2 },
-    Contested 			= { r = 0.8, g = 0.6, b = 0.4 },
+    Unknown     = { r = 0.8, g = 0.8, b = 0.8 },
+    Hostile     = { r = 0.9, g = 0.2, b = 0.2 },
+    Friendly    = { r = 0.2, g = 0.9, b = 0.2 },
+    Contested   = { r = 0.8, g = 0.6, b = 0.4 },
     
-    None      			= { r = 1.0, g = 1.0, b = 1.0 },
-    Levels    			= { r = 0.8, g = 0.6, b = 0.0 },
+    None        = { r = 1.0, g = 1.0, b = 1.0 },
+    Levels      = { r = 0.8, g = 0.6, b = 0.0 },
 };
 
 -- Options
 LevelRange = {
-    ["Opts"]			= LEVELRANGE_DEFAULT_OPTS,
+    ["Opts"] = LEVELRANGE_DEFAULT_OPTS,
 };
 
 
@@ -300,11 +288,11 @@ local function lUpdateTooltip(zoneName)
         levels = string.format(LEVELRANGE_LEVELS, min, max);
     end
 
-	-- Determine fishing level Requirement
+    -- Determine fishing level Requirement
     if (LEVELRANGE_FISHING[zoneName]) then
-		local fmin = LEVELRANGE_FISHING[zoneName][1];
-		flevel = string.format(LEVELRANGE_FLEVEL, fmin);
-	end
+        local fmin = LEVELRANGE_FISHING[zoneName][1];
+        flevel = string.format(LEVELRANGE_FLEVEL, fmin);
+    end
 
     -- Start making the Tooltip
 
@@ -315,10 +303,10 @@ local function lUpdateTooltip(zoneName)
     end
 
     -- Show fishing level requirement if desired
-	if (LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showFishing == true) then
-		if flevel then
-			LevelRangeTooltip:AddLine(flevel, levelscol.r, levelscol.g, levelscol.b);
-		end
+    if (LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showFishing == true) then
+        if flevel then
+            LevelRangeTooltip:AddLine(flevel, levelscol.r, levelscol.g, levelscol.b);
+        end
     end
     
     -- Show diplomacy if known and if wanted
@@ -426,8 +414,8 @@ function LevelRange_GetCmd(msg)
         local a,b,c=strfind(msg, "(%S+)"); -- contiguous string of non-space characters
         if a then
             return c, strsub(msg, b+2);
-        else	            
-	    return "";
+        else
+            return "";
         end
     end
 end
@@ -436,15 +424,15 @@ end
 function LevelRange_SlashHandler(msg)
     local Cmd, SubCmd = LevelRange_GetCmd(msg); -- call to above function
     if (Cmd == "help") then
- 	showHelp();
-
+        showHelp();
+    
     elseif (Cmd == "list") then
- 	printInstances();
-
+        printInstances();
+    
     -- Toggle LevelRange tooltip
     elseif (Cmd == "toggle") then
         toggleLevelRange();
-
+    
     -- Toggle LevelRange showing instances
     elseif (Cmd == "instances") then
         toggleInstances();
@@ -618,11 +606,11 @@ function LevelRangeOptionsCheckButton_OnClick()
     elseif (this.option == "showInstances") then
         toggleInstances();
     elseif (this.option == "showRaids") then
-	toggleRaids();
+        toggleRaids();
     elseif (this.option == "showPvP") then
-	togglePvP();
+        togglePvP();
     elseif (this.option == "showFishing") then
-	toggleFishing();
+        toggleFishing();
     end
     
     if (this:GetChecked()) then
@@ -772,7 +760,7 @@ function LevelRange_Initialize()
         LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showPvP = DEFAULT_LEVELRANGE_SHOWPVP;
     end
 
-	-- fishing Toggle
+    -- fishing Toggle
     if (LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showFishing == nil) then
         LevelRangeSettings[LEVELRANGE_REALMPLAYERNAME].showFishing = DEFAULT_LEVELRANGE_SHOWFISHING;
     end
@@ -780,7 +768,7 @@ function LevelRange_Initialize()
 end
 
 function LevelRange_OnEvent(event)
-    if (event == "VARIABLES_LOADED") then			
+    if (event == "VARIABLES_LOADED") then
         LevelRange_Initialize();
     
         -- Register LevelRange with myAddons
