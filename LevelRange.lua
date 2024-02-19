@@ -20,14 +20,14 @@
 LEVELRANGE_NAME     = "LevelRange"
 
 -- Version Number
-LEVELRANGE_VERSION  = "2.0.2";
+LEVELRANGE_VERSION  = "2.0.3";
 
 -- Details
 Details = {
     name            = LEVELRANGE_NAME,
     version         = LEVELRANGE_VERSION,
-    releaseDate     = "Aug 8, 2023",
-    author          = "Bull3t, Tenyar97, rado-boy",
+    releaseDate     = "Feb 19, 2024",
+    author          = "Bull3t, Tenyar97, rado-boy, blehz.",
     email           = "",
     website         = "https://github.com/Tenyar97/LevelRange-Turtle",
     category        = MYADDONS_CATEGORY_MAP,
