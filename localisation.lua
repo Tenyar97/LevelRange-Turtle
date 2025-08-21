@@ -109,13 +109,13 @@ LEVELRANGE_ZULFARRAK        = "Zul'Farrak";
 LEVELRANGE_INSTANCESTEXT    = "Instances:";
 
 --Turtle WoW Dungeons
-LEVELRANGE_CRESCENTGROVE    = "The Crescent Grove";
-LEVELRANGE_GILNEASCITY      = "Gilneas City";
-LEVELRANGE_HATEFORGEQUARRY  = "Hateforge Quarry";
-LEVELRANGE_KARAZHANCRYPT    = "Karazhan Crypt";
-LEVELRANGE_STORMWINDVAULT   = "Stormwind Vault";
-LEVELRANGE_COTBLACKMORASS   = "Caverns of Time: The Black Morass";
-LEVELRANGE_DRAGONMAWRETREAT     = "Gragonmaw Retreat";
+LEVELRANGE_CRESCENTGROVE        = "The Crescent Grove";
+LEVELRANGE_GILNEASCITY          = "Gilneas City";
+LEVELRANGE_HATEFORGEQUARRY      = "Hateforge Quarry";
+LEVELRANGE_KARAZHANCRYPT        = "Karazhan Crypt";
+LEVELRANGE_STORMWINDVAULT       = "Stormwind Vault";
+LEVELRANGE_COTBLACKMORASS       = "Caverns of Time: The Black Morass";
+LEVELRANGE_DRAGONMAWRETREAT     = "Dragonmaw Retreat";
 LEVELRANGE_STORMWROUGHTRUINS    = "Stormwrought Ruins";
 
 -- Raids
