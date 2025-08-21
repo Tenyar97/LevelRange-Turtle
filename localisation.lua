@@ -68,6 +68,9 @@ LEVELRANGE_LAPIDIS              = "Lapidis Isle";
 LEVELRANGE_TELABIM              = "Tel'Abim";
 LEVELRANGE_SCARLETENCLAVE       = "Scarlet Enclave";
 LEVELRANGE_HYJAL                = "Hyjal";
+LEVELRANGE_GRIMREACHES          = "Grim Reaches";
+LEVELRANGE_NORTHWIND            = "Northwind";
+LEVELRANGE_BALOR                = "Balor";
 
 -- Sub-zones
 LEVELRANGE_ORGRIMMAR        = "Orgrimmar";
@@ -111,7 +114,9 @@ LEVELRANGE_GILNEASCITY      = "Gilneas City";
 LEVELRANGE_HATEFORGEQUARRY  = "Hateforge Quarry";
 LEVELRANGE_KARAZHANCRYPT    = "Karazhan Crypt";
 LEVELRANGE_STORMWINDVAULT   = "Stormwind Vault";
-LEVELRANGE_COTBLACKMORASS   = "Caverns of Time: The Black Morass";    
+LEVELRANGE_COTBLACKMORASS   = "Caverns of Time: The Black Morass";
+LEVELRANGE_DRAGONMAWRETREAT     = "Gragonmaw Retreat";
+LEVELRANGE_STORMWROUGHTRUINS    = "Stormwrought Ruins";
 
 -- Raids
 LEVELRANGE_NAXXRAMAS        = "Naxxramas";
