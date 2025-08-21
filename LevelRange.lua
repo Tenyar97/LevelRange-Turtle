@@ -116,6 +116,9 @@ LEVELRANGE_RANGES = {
     [LEVELRANGE_TELABIM]                = {54, 60, lTYPE_CONTESTED},
     [LEVELRANGE_SCARLETENCLAVE]         = {55, 60, lTYPE_CONTESTED},
     [LEVELRANGE_HYJAL]                  = {58, 60, lTYPE_CONTESTED},
+    [LEVELRANGE_GRIMREACHES]            = {33, 38, lTYPE_CONTESTED},
+    [LEVELRANGE_NORTHWIND]              = {28, 34, lTYPE_CONTESTED},
+    [LEVELRANGE_BALOR]                  = {29, 34, lTYPE_CONTESTED},
 };
 
 -- Fishing Level Requirements
