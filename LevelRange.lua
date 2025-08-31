@@ -20,14 +20,14 @@
 LEVELRANGE_NAME     = "LevelRange"
 
 -- Version Number
-LEVELRANGE_VERSION  = "2.0.3";
+LEVELRANGE_VERSION  = "2.0.4";
 
 -- Details
 Details = {
     name            = LEVELRANGE_NAME,
     version         = LEVELRANGE_VERSION,
-    releaseDate     = "Feb 19, 2024",
-    author          = "Bull3t, Tenyar97, rado-boy, blehz.",
+    releaseDate     = "Aug 31, 2025",
+    author          = "Bull3t, Tenyar97, rado-boy, blehz., Magusbear",
     email           = "",
     website         = "https://github.com/Tenyar97/LevelRange-Turtle",
     category        = MYADDONS_CATEGORY_MAP,
@@ -110,6 +110,9 @@ LEVELRANGE_RANGES = {
     -- Turtle WoW Zones
     [LEVELRANGE_THALASSIANHIGHLANDS]    = { 1, 10, lTYPE_ALLIANCE},
     [LEVELRANGE_BLACKSTONEISLAND]       = { 1, 10, lTYPE_HORDE},
+    [LEVELRANGE_NORTHWIND]              = {28, 34, lTYPE_CONTESTED},
+    [LEVELRANGE_BALOR]                  = {29, 34, lTYPE_CONTESTED},
+    [LEVELRANGE_GRIMREACHES]            = {33, 38, lTYPE_CONTESTED},
     [LEVELRANGE_GILNEAS]                = {39, 46, lTYPE_CONTESTED},
     [LEVELRANGE_GILLIJIM]               = {48, 53, lTYPE_CONTESTED},
     [LEVELRANGE_LAPIDIS]                = {48, 53, lTYPE_CONTESTED},
@@ -169,6 +172,9 @@ LEVELRANGE_FISHING = {
     --[LEVELRANGE_LAPIDIS]            = {0},
     --[LEVELRANGE_TELABIM]            = {0},
     --[LEVELRANGE_HYJAL]              = {0},
+    --[LEVELRANGE_NORTHWIND]          = {0},
+    --[LEVELRANGE_BALOR]              = {0},
+    --[LEVELRANGE_GRIMREACHES]        = {0},
 };
 
 -- Instances
@@ -190,6 +196,8 @@ LEVELRANGE_INSTANCES = {
     
     -- Turtle WoW Dungeons
     [LEVELRANGE_ASHENVALE]          = {LEVELRANGE_BLACKFATHOMDEEPS, " (24-32)", LEVELRANGE_CRESCENTGROVE, " (32-38)"},
+    [LEVELRANGE_WETLANDS]           = {LEVELRANGE_DRAGONMAWRETREAT, " (27-33)"},
+    [LEVELRANGE_BALOR]              = {LEVELRANGE_STORMWROUGHTRUINS, " (27-33)"},
     [LEVELRANGE_GILNEAS]            = {LEVELRANGE_GILNEASCITY, " (43-49)"},
     [LEVELRANGE_BURNINGSTEPPE]      = {LEVELRANGE_HATEFORGEQUARRY, " (52-60)", LEVELRANGE_BLACKROCKDEPTH, " (52-60)", LEVELRANGE_BLACKROCKSPIRE, " (58-60)"},
     [LEVELRANGE_DEADWINDPASS]       = {LEVELRANGE_KARAZHANCRYPT, " (58 - 60)"},
